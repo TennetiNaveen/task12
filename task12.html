@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <style>
+                h1 {
+                    text-align: center;
+                    color: white;
+                    text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+                }
+                #image {
+                    width: 200px;
+                    height: 200px;
+                    transition: all 1s ease-in-out; 
+                }
+
+                .button {
+                    margin: 10px;
+                    padding: 10px;
+                    border: none;
+                    border-radius: 5px;
+                    background-color: #4CAF50;
+                    color: #fff;
+                    cursor: pointer;
+                }
+
+                .button:hover {
+                    background-color: #3e8e41;
+                }
+
+
+                #button1:hover ~ .main #image {
+                    transform: scale(1.2);
+                    filter: grayscale(100%);
+                }
+
+                #button2:hover ~ .main #image {
+                    transform: rotate(45deg); 
+                    filter: sepia(100%);
+                }
+
+                #button3:hover ~ .main #image {
+                    transform: translateX(50px); 
+                    filter: blur(5px); 
+                }
+
+                #button4:hover ~ .main #image {
+                    transform: skew(20deg);
+                    filter: contrast(150%); 
+                } 
+            </style>
+        </head>
+        <body>
+            <h1>Put on the cursor of the buttons : Hover</h1>
+            <div>
+              <button class="button" id="button1">Transform 1</button>
+              <button class="button" id="button2">Transform 2</button>
+              <button class="button" id="button3">Transform 3</button>
+              <button class="button" id="button4">Transform 4</button>
+              <div class="main">
+                <img id="image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0a4BgG-yiWggKG33Ku1qw8JaCntGStT8ArQ&s" alt="Original Image">
+              </div>
+            </div>
+        </body>
+    </html>
